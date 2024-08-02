@@ -1582,15 +1582,15 @@ console.log("Updated date: " + now);
 
 
 //math Functions
-/*
+
 // Math constants
 console.log("PI: " + Math.PI);
 console.log("E: " + Math.E);
 
 // Rounding numbers
-console.log("Round 4.6: " + Math.round(4.6));
-console.log("Ceil 4.2: " + Math.ceil(4.1));
-console.log("Floor 4.8: " + Math.floor(4.4));
+console.log("Round 4.6: " + Math.round(4.6)); //5
+console.log("Ceil 4.2: " + Math.ceil(4.2)); //5
+console.log("Floor 4.8: " + Math.floor(4.5)); //4
 
 // Power and square root
 console.log("2 to the power of 3: " + Math.pow(2, 3));
@@ -1606,7 +1606,7 @@ console.log("Random number: " + Math.random());
 
 // Random integer between 0 and 9
 console.log("Random integer between 0 and 9: " + Math.floor(Math.random() * 10));
-*/
+
 
 /*
 function fun1(){
