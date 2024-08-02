@@ -1582,7 +1582,7 @@ console.log("Updated date: " + now);
 
 
 //math Functions
-
+/*
 // Math constants
 console.log("PI: " + Math.PI);
 console.log("E: " + Math.E);
@@ -1606,7 +1606,7 @@ console.log("Random number: " + Math.random());
 
 // Random integer between 0 and 9
 console.log("Random integer between 0 and 9: " + Math.floor(Math.random() * 10));
-
+*/
 
 /*
 function fun1(){
