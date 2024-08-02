@@ -1,0 +1,345 @@
+<!--onmouseover and onmouseout
+<!DOCTYPE html> 
+<html>
+    <head>
+      <style>
+        div{
+          background-color:#D94A38;
+          width:120px;
+          height:20px;
+          padding:40px;
+        }
+      </style>
+    </head>
+<body> 
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"></div> 
+
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" id="div1"></div>
+<script> 
+function mOver(a) 
+{ 
+a.innerHTML="Thank You" ;
+} ;
+function mOut(obj)
+{ 
+obj.innerHTML="Mouse Over Me" ;
+} ;
+
+
+
+function mouseOver(over){
+over.innerHTML="Hello Akshay!";
+let div=document.getElementById("div1");
+div.style.backgroundColor="blue";
+}
+function mouseOut(out){
+  let div=document.getElementById("div1");
+
+}
+
+</script> 
+ 
+</body>
+</html>
+-->
+
+<!--Keyboard events
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter Your name: </label><br>
+    <input type="text" id="myfun" onkeyup="myfunction()"><br>
+    <label>Enter Your last name: </label><br>
+    <input type="text" id="lname" onkeypress="pressfun()"><br>
+    <label>Enter Your Full name: </label><br>
+    <input type="text" id="fname" onkeydown="downfun()"><br>
+    <script>
+        function myfunction(){
+            let x=document.getElementById("myfun");
+            x.value=x.value.toUpperCase();
+        }
+        function pressfun(){
+            let y=document.getElementById("lname");
+            y.style.color="red";
+        }
+        function downfun(){
+            let z=document.getElementById("fname");
+            z.style.backgroundColor="green";
+            z.style.color="white";
+        }
+    </script>
+</body>
+</html>
+-->
+
+<!--alert, confirm and prompt
+
+alert box:- An alert box is often used if you want to make sure information
+            comes through to the user. When an alert box pops up, the user 
+            will have to click "OK" to proceed. 
+
+Confirm Box :- A confirm box is often used if you want the user to verify or 
+            accept something when a confirm box pops-up, the user will have to 
+            click either "ok" or "cancel" to proceed.
+
+prompt :- A prompt box is often used if you want the user to input a value before entering a page.
+          When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed 
+          after entering an input value. If the user clicks "OK" the box returns the input value.
+          If the user clicks "Cancel" the box returns null
+-->
+
+<!--
+    prompt example
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Prompt</h2>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+-->
+
+<!--
+    confirm box example
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Confirm Box</h2>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+</body>
+</html>
+
+-->
+
+<!--
+    alert box example
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Alert</h2>
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+</script>
+</body>
+</html>
+
+-->
+
+<!--
+  onchange event handlers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>onchange Event Example</title>
+</head>
+<body>
+<label for="fruitSelect">Select a fruit:</label>
+<select id="fruitSelect" onchange="displayFruit()">
+  <option value="apple">Apple</option>
+  <option value="banana">Banana</option>
+  <option value="orange">Orange</option>
+  <option value="grape">Grape</option>
+</select>
+
+<p id="display">You selected: <span id="selectedFruit"></span></p>
+
+<script>
+function displayFruit() {
+  var selectElement = document.getElementById("fruitSelect");
+  var selectedValue = selectElement.value;
+  var displayElement = document.getElementById("selectedFruit");
+  displayElement.textContent = selectedValue;
+}
+</script>
+
+</body>
+</html>
+
+-->
+
+<!--
+  onclick event handler
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2"> // this code refresh page automatically in mentioned time
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="a">
+    <input type="number" id="b"><br>
+    <button onclick="handle()">Submit</button><br>
+    <input type="number" id="c">
+    <marquee>This is HTML</marquee>
+</body>
+<script>
+    function handle(){
+        let x=Number(document.getElementById("a").value); //from document the value it was taking in string format.
+        let y=Number(document.getElementById("b").value);
+        //let z=x+y;
+        //document.getElementById("c").value=z;
+        if(x=="" || y==""){
+          alert("Please enter field")
+        }
+        if(x!="" && y!=""){ 
+          let z=x+y;
+          document.getElementById("c").value=z;  
+        }
+        }
+</script>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+</head>
+<body>
+  <p>This is the content of the second page.</p>
+</body>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Storage</title>
+  <style>
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #dataList {
+      margin-top: 20px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Data Storage</h2>
+    <input type="text" id="dataInput" placeholder="Enter your data">
+    <button onclick="saveData()">Save Data</button>
+    <div id="dataList"></div>
+  </div>
+  <script>
+    // Function to save data to localStorage
+    function saveData() {
+      var inputData = document.getElementById('dataInput').value;
+
+      // Check if data is not empty
+      if (inputData.trim() !== '') {
+        var savedData = localStorage.getItem('savedData');
+
+        // If there is no saved data yet, create an empty array
+        if (!savedData) {
+          savedData = [];
+        } else {
+          savedData = JSON.parse(savedData);
+        }
+
+        // Add new data to the array
+        savedData.push(inputData);
+
+        // Save the updated array back to localStorage
+        localStorage.setItem('savedData', JSON.stringify(savedData));
+
+        // Display the saved data
+        displayData();
+      } else {
+        alert('Please enter some data!');
+      }
+    }
+    // Function to display saved data
+    function displayData() {
+      var dataListDiv = document.getElementById('dataList');
+      dataListDiv.innerHTML = '';
+      var savedData = localStorage.getItem('savedData');
+      if (savedData) {
+        savedData = JSON.parse(savedData);
+        savedData.forEach(function (item) {
+          var itemDiv = document.createElement('div');
+          itemDiv.textContent = item;
+          dataListDiv.appendChild(itemDiv);
+        });
+      }
+    }
+    // Display any existing saved data when the page loads
+    displayData();
+  </script>
+</body>
+</html>
+-->
